@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="lankydan/tutorials/fxml/css.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lankydan.tutorials.fxml.controller.MainAppController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="420.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <LineChart fx:id="lineGraph" createSymbols="false" legendVisible="false" prefWidth="423.0" visible="false" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                    	<NumberAxis autoRanging="false" lowerBound="-10" side="BOTTOM" tickUnit="1" upperBound="10" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis autoRanging="false" lowerBound="-10" side="LEFT" tickUnit="1" upperBound="10" />
+                    </yAxis>
+                    <cursor>
+                       <Cursor fx:constant="CROSSHAIR" />
+                    </cursor>
+                  </LineChart>
+                  <AreaChart fx:id="areaGraph" createSymbols="false" legendVisible="false" prefHeight="372.0" prefWidth="423.0" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <xAxis>
+                    	<NumberAxis autoRanging="false" lowerBound="-10" side="BOTTOM" tickUnit="1" upperBound="10" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis autoRanging="false" lowerBound="-10" side="LEFT" tickUnit="1" upperBound="10" />
+                    </yAxis>
+                    <cursor>
+                       <Cursor fx:constant="CROSSHAIR" />
+                    </cursor>
+                  </AreaChart>
+                  <HBox layoutX="33.0" layoutY="366.0" prefHeight="29.0" prefWidth="377.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="13.0">
+                     <children>
+                        <Button fx:id="lineGraphButton" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleLineGraphButtonAction" prefHeight="29.0" prefWidth="183.0" text="Line Graph" HBox.hgrow="ALWAYS" />
+                        <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#handleAreaGraphButtonAction" prefHeight="29.0" prefWidth="184.0" text="Area Graph" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <VBox prefHeight="398.0" prefWidth="183.0" HBox.hgrow="NEVER">
+               <children>
+                  <Button maxHeight="Infinity" mnemonicParsing="false" onAction="#handleXYButtonAction" prefHeight="66.0" prefWidth="266.0" text="y=x" VBox.vgrow="ALWAYS" fx:id="xyButton" />
+                  <Button maxHeight="Infinity" mnemonicParsing="false" onAction="#handleXYButton2Action" prefHeight="66.0" prefWidth="266.0" text="y=x-3" VBox.vgrow="ALWAYS" fx:id="xyButton2" />
+                  <Button fx:id="squaredButton" maxHeight="Infinity" mnemonicParsing="false" onAction="#handleSquaredButtonAction" prefHeight="67.0" prefWidth="266.0" text="y=x^2" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="squaredButton2" maxHeight="Infinity" mnemonicParsing="false" onAction="#handleSquaredButton2Action" prefHeight="67.0" prefWidth="266.0" text="y=x^2+2" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="cubedButton" maxHeight="Infinity" mnemonicParsing="false" onAction="#handleCubedButtonAction" prefHeight="67.0" prefWidth="266.0" text="y=x^3" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="cubedButton2" maxHeight="Infinity" mnemonicParsing="false" onAction="#handleCubedButton2Action" prefHeight="67.0" prefWidth="266.0" text="y=(x-3)^3-1" VBox.vgrow="ALWAYS" />
+                  <Button fx:id="clearButton" maxHeight="Infinity" mnemonicParsing="false" onAction="#handleClearButtonAction" prefHeight="67.0" prefWidth="266.0" text="clear" VBox.vgrow="ALWAYS" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

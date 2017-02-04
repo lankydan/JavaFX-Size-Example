@@ -1,0 +1,86 @@
+#pane, .root, .split-pane{
+    -fx-background-color: #353434;
+    -fx-foreground-color: #353434;
+}
+
+.default-color0.chart-series-line { -fx-stroke: #2c2e4e; }
+
+.chart-vertical-zero-line {
+    -fx-stroke: white;
+}
+.chart-horizontal-zero-line {
+    -fx-stroke: white;
+}
+
+.chart-plot-background {
+    -fx-background-color: #575758;
+    -fx-foreground-color: white;
+    -fx-stroke: white;
+} 
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #898887;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #898887;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.axis {
+	-fx-stroke: white;
+	-fx-fill: white;
+    -fx-font-size: 1.4em;    
+    -fx-tick-label-fill: white;
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 0;
+    -fx-minor-tick-length: 0;
+}
+
+.background {
+    -fx-background-color: #674A44;
+    -fx-foreground-color: #353434;
+}
+
+.button {
+    -fx-padding: 5 22 5 22;   
+    -fx-border-color: #353434;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: derive(#353434,20%);
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 11pt;
+    -fx-text-fill: #d8d8d8;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #bdbcbc;
+  -fx-text-fill: black;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #353434;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.text-area .content {
+	-fx-background-color: #575758;
+}
