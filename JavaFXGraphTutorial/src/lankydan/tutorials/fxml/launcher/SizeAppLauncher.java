@@ -23,9 +23,9 @@ public class SizeAppLauncher extends Application {
 
 			stage.setMinHeight(250);
 			stage.setMinWidth(500);
-			//
-			// stage.setMaxHeight(500);
-			// stage.setMaxWidth(1000);
+
+			stage.setMaxHeight(500);
+			stage.setMaxWidth(1000);
 
 			stage.show();
 		} catch (Exception e) {
